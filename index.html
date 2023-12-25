@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud system</title>
+    <!-- < bootstrap -->
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body class="bg-info">
+
+
+    <div class="container text-center ">
+        <div class="card  w-100 mb-3 border-0 mt-5">
+            <div class="card-body my-5 ">
+                <div class="site-name col-12 mt-3 fw-bold ">
+                    <label for="exampleFormControlInput1" class="fa-solid fa-book-bookmark me-3">product</label>
+                    <input type="text" class="form-control" id="prodName" placeholder="enter product name">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label col-12 mt-3 fw-bold">category</label>
+                    <input type="text" class="form-control" id="prodCategory" placeholder="enter product category">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label col-12 mt-3 fw-bold">price</label>
+                    <input type="text" class="form-control" id="prodPrice" placeholder="">
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label col-12 mt-3 fw-bold">decription</label>
+                    <textarea class="form-control" id="prodDesc" rows="3"></textarea>
+                </div>
+                <button onclick="getInputsValue()" type="button" class="btn btn-primary btn-lg" id="addbtn">Add
+                    Product</button>
+                <button id="updatebtn" type="button" class="btn btn-warning  btn-lg d-none "
+                    onclick="updateprod()">Update Product</button>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card w-100 my-3 py-3 border-0">
+            <div class="card-body my-5 ">
+                <input onkeyup="search(this.value)" id="search" type="text" class="form-control  my-3 "
+                    placeholder="search by product name">
+                <table class=" table text-center align-middle ">
+
+                    <thead>
+                        <th>index</th>
+                        <th id="">name</th>
+                        <th id="">category</th>
+                        <th id="">price</th>
+                        <th id="">description</th>
+                        <th id="update">update</th>
+                        <th id="delete">delete</th>
+                    </thead>
+                    <tbody id="tbody">
+
+                    </tbody>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- java bootstrap -->
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- java file -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>
